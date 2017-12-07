@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F10E2081FD80AE200972DF1 /* ListExercicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10E2071FD80AE200972DF1 /* ListExercicesController.swift */; };
+		0F10E20A1FD859FB00972DF1 /* ARKITViewExercicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10E2091FD859FB00972DF1 /* ARKITViewExercicesController.swift */; };
 		14AED4471FD6F1E5001B6267 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AED4461FD6F1E5001B6267 /* AppDelegate.swift */; };
 		14AED4491FD6F1E5001B6267 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 14AED4481FD6F1E5001B6267 /* art.scnassets */; };
 		14AED44B1FD6F1E5001B6267 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AED44A1FD6F1E5001B6267 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F10E2071FD80AE200972DF1 /* ListExercicesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListExercicesController.swift; sourceTree = "<group>"; };
+		0F10E2091FD859FB00972DF1 /* ARKITViewExercicesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKITViewExercicesController.swift; sourceTree = "<group>"; };
 		14AED4431FD6F1E5001B6267 /* arkitDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = arkitDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14AED4461FD6F1E5001B6267 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14AED4481FD6F1E5001B6267 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				14AED4481FD6F1E5001B6267 /* art.scnassets */,
 				14AED44A1FD6F1E5001B6267 /* ViewController.swift */,
 				14AED44C1FD6F1E5001B6267 /* Main.storyboard */,
+				0F10E2091FD859FB00972DF1 /* ARKITViewExercicesController.swift */,
+				0F10E2071FD80AE200972DF1 /* ListExercicesController.swift */,
 				14AED44F1FD6F1E5001B6267 /* Assets.xcassets */,
 				14AED4511FD6F1E5001B6267 /* LaunchScreen.storyboard */,
 				14AED4541FD6F1E5001B6267 /* Info.plist */,
@@ -265,6 +271,8 @@
 			files = (
 				14AED44B1FD6F1E5001B6267 /* ViewController.swift in Sources */,
 				14AED4471FD6F1E5001B6267 /* AppDelegate.swift in Sources */,
+				0F10E20A1FD859FB00972DF1 /* ARKITViewExercicesController.swift in Sources */,
+				0F10E2081FD80AE200972DF1 /* ListExercicesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,12 +439,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8FN49N3XV;
 				INFOPLIST_FILE = arkitDev/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = arkitWorkshop.arkitDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -445,12 +455,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8FN49N3XV;
 				INFOPLIST_FILE = arkitDev/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = arkitWorkshop.arkitDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
