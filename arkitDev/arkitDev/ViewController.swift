@@ -34,7 +34,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //print(coachBoardScene.rootNode.childNodes)
         
         // Import my 3D Object
-        let coachBoardScene = SCNScene(named: "art.scnassets/coach_Mec_Pompe.scn")!
+        let coachBoardScene = SCNScene(named: "art.scnassets/Mec_Pompe/coach_Mec_Pompe/coach_Mec_Pompe.scn")!
         
         let nodeObject = SCNNode()
         
@@ -50,12 +50,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
         
         // Create a SceneKit plane to visualize the node using its position and extent.
-        let plane = SCNSphere(radius: 0.1)
-        let planeNode = SCNNode(geometry: plane)
-        planeNode.position = SCNVector3Make(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
-        node.addChildNode(planeNode)
+        //let plane = SCNSphere(radius: 0.1)
+        //let planeNode = SCNNode(geometry: plane)
+        //planeNode.position = SCNVector3Make(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
+        //node.addChildNode(planeNode)
     
         let dude = addCoachBoard()
+        
+        //dude.position = SCNVector3(0.0, 0.0, 0.2)
+        
         dude.position = SCNVector3Make(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
         //dude.scale = SCNVector3(0.01,0.01,0.01)
         //addCoachBoard()
