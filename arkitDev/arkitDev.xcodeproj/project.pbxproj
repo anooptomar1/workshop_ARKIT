@@ -439,11 +439,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P8FN49N3XV;
+				DEVELOPMENT_TEAM = X888SZ3V5L;
 				INFOPLIST_FILE = arkitDev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = arkitWorkshop.arkitDev;
+				PRODUCT_BUNDLE_IDENTIFIER = arkitworkshopofficiel.arkitDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -455,11 +455,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P8FN49N3XV;
+				DEVELOPMENT_TEAM = X888SZ3V5L;
 				INFOPLIST_FILE = arkitDev/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = arkitWorkshop.arkitDev;
+				PRODUCT_BUNDLE_IDENTIFIER = arkitworkshopofficiel.arkitDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
