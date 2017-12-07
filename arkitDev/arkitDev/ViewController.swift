@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  arkitDev
+//  ARKITBack
 //
-//  Created by Adrien Jourdier on 05/12/2017.
+//  Created by Adrien Jourdier on 07/12/2017.
 //  Copyright © 2017 arkitWorkshop. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
-
+    
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -24,10 +24,52 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene()
         
         // Set the scene to the view
         sceneView.scene = scene
+    }
+    
+    func addCoachBoard() -> SCNNode {
+        //print(coachBoardScene.rootNode.childNodes)
+        
+        // Import my 3D Object
+        let coachBoardScene = SCNScene(named: "art.scnassets/coach_Mec_Pompe.scn")!
+        
+        let nodeObject = SCNNode()
+        
+        for child in coachBoardScene.rootNode.childNodes {
+            nodeObject.addChildNode(child)
+        }
+        
+        return nodeObject
+    }
+
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        // This visualization covers only detected planes.
+        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
+        
+        // Create a SceneKit plane to visualize the node using its position and extent.
+        let plane = SCNSphere(radius: 0.1)
+        let planeNode = SCNNode(geometry: plane)
+        planeNode.position = SCNVector3Make(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
+        node.addChildNode(planeNode)
+    
+        let dude = addCoachBoard()
+        dude.position = SCNVector3Make(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
+        //dude.scale = SCNVector3(0.01,0.01,0.01)
+        //addCoachBoard()
+        
+        //body!.position = SCNVector3Make(planeAnchor.center.x, 0, planeAnchor.center.z)
+        
+        // Create a new scene
+        //let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        // Set the scene to the view
+        //sceneView.scene = scene
+        
+        //node.addChildNode(body!)
+        
+        node.addChildNode(dude)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +77,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-
+        
+        configuration.planeDetection = .horizontal
+        
         // Run the view's session
         sceneView.session.run(configuration)
     }
@@ -51,17 +95,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
+    
     // MARK: - ARSCNViewDelegate
     
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
+    /*
+     // Override to create and configure nodes for anchors added to the view's session.
+     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+     let node = SCNNode()
      
-        return node
-    }
-*/
+     return node
+     }
+     */
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
@@ -78,3 +122,4 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
 }
+
