@@ -35,7 +35,7 @@ class ARKITViewExercicesController: UIViewController, ARSCNViewDelegate {
         //print(coachBoardScene.rootNode.childNodes)
         
         // Import my 3D Object
-        let coachBoardScene = SCNScene(named: "art.scnassets/Mec_Pompe/coach_Mec_Pompe/coach_Mec_Pompe.scn")!
+        let coachBoardScene = SCNScene(named: "art.scnassets/Mec_Pompe/coach_Mec_Pompe/coach_Mec_Pompe.dae")!
         
         let nodeObject = SCNNode()
         
@@ -60,8 +60,8 @@ class ARKITViewExercicesController: UIViewController, ARSCNViewDelegate {
         
         //dude.position = SCNVector3(0.0, 0.0, 0.2)
         
-        dude.position = SCNVector3Make(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
-        //dude.scale = SCNVector3(0.01,0.01,0.01)
+        dude.position = SCNVector3Make(planeAnchor.center.x, 0, planeAnchor.center.z)
+        
         //addCoachBoard()
         
         //body!.position = SCNVector3Make(planeAnchor.center.x, 0, planeAnchor.center.z)
