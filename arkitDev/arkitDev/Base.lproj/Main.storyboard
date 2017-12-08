@@ -762,6 +762,9 @@
                                 <rect key="frame" x="45" y="283" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Vinette-pompe"/>
+                                <connections>
+                                    <segue destination="WNR-la-Lcw" kind="show" id="tw6-fM-ZEk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGd-1v-qg4">
                                 <rect key="frame" x="45" y="452" width="128" height="128"/>
@@ -796,6 +799,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Hr-Cz-uyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1810.4000000000001" y="1308.3958020989505"/>
+        </scene>
+        <!--View Exercices Controller-->
+        <scene sceneID="KHj-dI-KbJ">
+            <objects>
+                <viewController id="WNR-la-Lcw" customClass="ARKITViewExercicesController" customModule="arkitDev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e7K-6m-hoh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PcH-30-9bV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7SA-2B-cZ3"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="PcH-30-9bV" id="sPl-k4-BDv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zb-Wb-fIl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3069.5999999999999" y="1371.3643178410796"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nC9-w5-BSb">
